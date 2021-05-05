@@ -45,9 +45,9 @@ public class AddAndDelAuto extends AllMethods{
         clickMethod(addAutoLoc);
         isEqualsTitle(h1, title);
         getElementDropBox(allAuto);
-        sleepMethod(3000);
+        sleepMethod(3000);//не явного ожидание недостаточно скрипт не успевает загружаться
         getElementDropBox(modelAuto);
-        sleepMethod(3000);
+        sleepMethod(3000);//не явного ожидание недостаточно скрипт не успевает загружаться
         if(driver.findElements(genAuto).size() > 0) {
             getElementDropBox(genAuto);
         }
@@ -57,7 +57,7 @@ public class AddAndDelAuto extends AllMethods{
     public void clickDelete() {
         clickMethod(loginLoc);
         clickMethod(settings);
-        sleepMethod(3000);
+        sleepMethod(3000);//не явного ожидание недостаточно скрипт не успевает загружаться
         clickMethod(settingAuto);
         clickMethod(deleteAuto);
         clickModalWindow();

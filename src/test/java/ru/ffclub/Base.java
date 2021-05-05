@@ -45,7 +45,7 @@ public class Base {
     @AfterClass
     public static void end() {
         System.out.println("end");
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        //driver.quit();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.quit();
     }
 }
