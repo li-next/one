@@ -45,9 +45,9 @@ public class AddAndDelAuto extends AllMethods{
         clickMethod(addAutoLoc);
         isEqualsTitle(h1, title);
         getElementDropBox(allAuto);
-        sleepMethod(1000);
+        sleepMethod(3000);
         getElementDropBox(modelAuto);
-        sleepMethod(1000);
+        sleepMethod(3000);
         if(driver.findElements(genAuto).size() > 0) {
             getElementDropBox(genAuto);
         }
@@ -57,7 +57,7 @@ public class AddAndDelAuto extends AllMethods{
     public void clickDelete() {
         clickMethod(loginLoc);
         clickMethod(settings);
-        sleepMethod(1000);
+        sleepMethod(3000);
         clickMethod(settingAuto);
         clickMethod(deleteAuto);
         clickModalWindow();

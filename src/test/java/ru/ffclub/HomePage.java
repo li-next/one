@@ -25,4 +25,8 @@ public class HomePage extends AllMethods{
         isEqualsTitle(titleLoc, titleStr);
 
     }
+
+    public void openAfterLogin() {
+        driver.get(siteUrl);
+    }
 }

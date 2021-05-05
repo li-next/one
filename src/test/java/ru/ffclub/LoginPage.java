@@ -26,6 +26,10 @@ public class LoginPage extends AllMethods{
         fillString(loginLocInput, log);
         fillString(passLocInput, pass);
         clickMethod(buttonLoc);
+
+    }
+
+    public void loginSuccessfully() {
         isElementDisplayed(forumUpdates);
         isEqualsTitle(forumUpdates, titlePage);
     }

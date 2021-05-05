@@ -2,7 +2,9 @@ package ru.ffclub;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -12,21 +14,21 @@ import java.util.concurrent.TimeUnit;
 
 public class Base {
 
-    protected String loginSite = "";
-    protected String passwordSite = "";
+    protected static String loginSite = "";
+    protected static  String passwordSite = "";
 
-    protected WebDriver driver;
-    protected HomePage homePage;
-    protected AllMethods allMethods;
-    protected SignUpPage signUpPage;
-    protected LoginPage loginPage;
-    protected LogOut logOut;
-    protected AddAndDelAuto addAndDelAuto;
+    protected static  WebDriver driver;
+    protected static  HomePage homePage;
+    protected static  AllMethods allMethods;
+    protected static  SignUpPage signUpPage;
+    protected static  LoginPage loginPage;
+    protected static  LogOut logOut;
+    protected static  AddAndDelAuto addAndDelAuto;
 
 
 
-    @Before
-    public void start() {
+    @BeforeClass
+    public static void start() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -40,10 +42,10 @@ public class Base {
 
 
     }
-    @After
-    public void end() {
+    @AfterClass
+    public static void end() {
         System.out.println("end");
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.quit();
+        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        //driver.quit();
     }
 }

@@ -27,6 +27,7 @@ public class GetTestSite extends Base{
         homePage.openHomePage();
         loginPage.clickLog();
         loginPage.loginForm(loginSite, passwordSite);
+        loginPage.loginSuccessfully();
     }
 
 
@@ -64,7 +65,8 @@ public class GetTestSite extends Base{
     public void addAndDelAutoSite() {
         loginSite();
         addAndDelAuto.clickAddAuto();
-        homePage.openHomePage();
+        homePage.openAfterLogin();
+        loginPage.loginSuccessfully();
         addAndDelAuto.clickDelete();
     }
 
