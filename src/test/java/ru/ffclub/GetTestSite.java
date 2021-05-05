@@ -40,6 +40,7 @@ public class GetTestSite extends Base{
         loginPage.loginForm(loginSite, passwordSite);
         //нет никакого сообщение от том что надо вести login и password страница просто перезагружается
     }
+
     
 
     //НЕ верный ввод login and password
