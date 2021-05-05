@@ -21,8 +21,8 @@ public class HomePage extends AllMethods{
 
     public void openHomePage() {
         driver.get(siteUrl);
-        //isElementDisplayed(h1);
-        //isEqualsTitle(titleLoc, titleStr);
+        isElementDisplayed(h1);
+        isEqualsTitle(titleLoc, titleStr);
 
     }
 }

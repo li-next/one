@@ -14,6 +14,7 @@ public class Base {
 
     protected String loginSite = "";
     protected String passwordSite = "";
+
     protected WebDriver driver;
     protected HomePage homePage;
     protected AllMethods allMethods;
@@ -42,7 +43,7 @@ public class Base {
     @After
     public void end() {
         System.out.println("end");
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        //driver.quit();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.quit();
     }
 }

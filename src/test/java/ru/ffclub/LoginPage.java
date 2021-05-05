@@ -16,9 +16,7 @@ public class LoginPage extends AllMethods{
     private By forumUpdates  = By.xpath("//div[text()='Обновления на форумах']");
     private String titlePage = "ffclub";
 
-    //dkgmtsnpncajoekrmw@miucce.com
-    //qwerty1234
-    //Artur1234
+
 
     public void clickLog() {
         clickMethod(loginLoc);
@@ -28,8 +26,8 @@ public class LoginPage extends AllMethods{
         fillString(loginLocInput, log);
         fillString(passLocInput, pass);
         clickMethod(buttonLoc);
-        //isElementDisplayed(forumUpdates);
-        //isEqualsTitle(forumUpdates, titlePage);
+        isElementDisplayed(forumUpdates);
+        isEqualsTitle(forumUpdates, titlePage);
     }
 
     public void loginErr() {
