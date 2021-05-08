@@ -2,16 +2,10 @@ package ru.ffclub;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.awt.*;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.UnsupportedFlavorException;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -25,6 +19,7 @@ public class AllMethods {
     public AllMethods(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 15);
+        PageFactory.initElements(driver, this);
     }
 
 

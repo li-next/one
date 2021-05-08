@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LogOut extends AllMethods{
+
     public LogOut(WebDriver driver) {
         super(driver);
     }

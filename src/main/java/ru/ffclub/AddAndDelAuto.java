@@ -1,18 +1,16 @@
 package ru.ffclub;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class AddAndDelAuto extends AllMethods{
+
     public AddAndDelAuto(WebDriver driver) {
         super(driver);
+
+
     }
 
     private String title = "Автомобили";

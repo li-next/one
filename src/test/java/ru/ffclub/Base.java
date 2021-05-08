@@ -18,12 +18,12 @@ public class Base {
     protected static  String passwordSite = "";
 
     protected static  WebDriver driver;
-    protected static  HomePage homePage;
-    protected static  AllMethods allMethods;
-    protected static  SignUpPage signUpPage;
-    protected static  LoginPage loginPage;
-    protected static  LogOut logOut;
-    protected static  AddAndDelAuto addAndDelAuto;
+    protected HomePage homePage = new HomePage(driver);
+    protected AllMethods allMethods = new AllMethods(driver);
+    protected SignUpPage signUpPage = new SignUpPage(driver);
+    protected LoginPage loginPage = new LoginPage(driver);
+    protected LogOut logOut = new LogOut(driver);
+    protected AddAndDelAuto addAndDelAuto = new AddAndDelAuto(driver);
 
 
 
@@ -33,12 +33,12 @@ public class Base {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        homePage = PageFactory.initElements(driver, HomePage.class);
-        allMethods = PageFactory.initElements(driver, AllMethods.class);
-        signUpPage = PageFactory.initElements(driver, SignUpPage.class);
-        loginPage = PageFactory.initElements(driver, LoginPage.class);
-        logOut = PageFactory.initElements(driver, LogOut.class);
-        addAndDelAuto = PageFactory.initElements(driver, AddAndDelAuto.class);
+        //homePage = PageFactory.initElements(driver, HomePage.class);
+        //allMethods = PageFactory.initElements(driver, AllMethods.class);
+        //signUpPage = PageFactory.initElements(driver, SignUpPage.class);
+        //loginPage = PageFactory.initElements(driver, LoginPage.class);
+        //logOut = PageFactory.initElements(driver, LogOut.class);
+        //addAndDelAuto = PageFactory.initElements(driver, AddAndDelAuto.class);
 
 
     }
